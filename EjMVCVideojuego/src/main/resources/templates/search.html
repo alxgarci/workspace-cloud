@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Buscar</title>
+</head>
+<body>
+	<p th:text="'Hola ' + ${nombreUsuario}"></p>
+	<form action="doBuscarId" method="post">
+	Introduzca el id a buscar en la base de datos:
+	<br/>
+	<input type="text" name="videojuego_id">
+	<br/>
+	<input type="submit" value="Enviar"/>
+	</form>
+
+</body>
+</html>

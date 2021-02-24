@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Resultados</title>
+</head>
+<body>
+<h1 style="color:blue">Resultados de la búsqueda de videojuegos:</h1>
+
+	<h3 style="color:red" th:each="valor : ${lista}">
+    	<span th:text="${valor.id}"></span>
+    	-
+    	<span th:text="${valor.nombre}"></span>
+    	-
+    	<span th:text="${valor.compania}"></span>
+    	-
+    	<span th:text="${valor.precio}"></span>
+    	-
+    	<span th:text="${valor.puntuacion}"></span>
+	</h3>
+
+</body>
+</html>
