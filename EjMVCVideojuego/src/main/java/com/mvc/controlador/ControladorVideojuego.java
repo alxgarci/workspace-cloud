@@ -26,6 +26,7 @@ public class ControladorVideojuego {
 		Videojuego v = new Videojuego();
 		if (!id.isEmpty()) {
 			int idInt = Integer.parseInt(id);
+			
 			v.setId(idInt);
 		}
 		Videojuego videojuego = gVid.existeId(v);
@@ -39,12 +40,11 @@ public class ControladorVideojuego {
 			listaVideojuegos.add(videojuego);
 			
 			model.addAttribute("lista", listaVideojuegos);
-			return "resultados";
+			return "search";
 		} else {
 			listaVideojuegos.addAll(gVid.selectAll());
 			model.addAttribute("lista", listaVideojuegos);
-			
-			return "resultados";
+			return "search";
 		}
 	}
 	

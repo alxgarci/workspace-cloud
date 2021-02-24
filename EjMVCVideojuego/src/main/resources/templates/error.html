@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Error</title>
 </head>
 <body>
-	<h1 style="color:red;">USUARIO INCORRECTO</h1>
+	<h1 style="color:firebrick;">
+		ERROR
+		<span th:text="${status}"></span>
+		:
+		<span th:text="${error}"></span>
+	</h1>
+	<h3>
+		<span th:text="${timestamp}"></span>
+	</h3>
+	<h3>
+		<span th:text="${path}"></span>
+	</h3>
 
 </body>
 </html>

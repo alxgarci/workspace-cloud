@@ -34,6 +34,9 @@ public class ControladorUsuario {
 			
 			return "search";
 		}else {
+			model.addAttribute("error", "No se encuentra el usuario");
+			String msg = "usuario [" + nombre + "] no encontrado o contraseña incorrecta";
+			model.addAttribute("path", msg);
 			return "error";
 		}
 	}

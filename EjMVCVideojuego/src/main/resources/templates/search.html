@@ -13,6 +13,20 @@
 	<br/>
 	<input type="submit" value="Enviar"/>
 	</form>
+	
+	<h1 style="color:blue">Consulta: </h1>
+
+	<h3 style="color:coral" th:each="valor : ${lista}">
+    	<span th:text="${valor.id}"></span>
+    	-
+    	<span th:text="${valor.nombre}"></span>
+    	-
+    	<span th:text="${valor.compania}"></span>
+    	-
+    	<span th:text="${valor.precio}"></span>
+    	-
+    	<span th:text="${valor.puntuacion}"></span>
+	</h3>
 
 </body>
 </html>
