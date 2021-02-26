@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="direccion1" class="entidad.Direccion">
+		<property name="tipoVia" value="Calle"></property>
+		<property name="nombre" value="Bravo Murillo"></property>
+		<property name="cp" value="29192"></property>
+		<property name="num" value="177"></property>	
+	</bean>
+	
+	<bean id="persona1" class="entidad.Persona">
+		<property name="nombre" value="Alex"></property>
+		<property name="edad" value="12"></property>
+		<property name="dni" value="1231234z"></property>
+		<property name="direccion" ref="direccion1"></property>
+	</bean>
+	
+	<bean id="habitacion1" class="entidad.Habitacion">
+		<property name="m2" value="9.1"></property>
+		<property name="tipoHab" value="Cocina"></property>			
+	</bean>
+	<bean id="habitacion2" class="entidad.Habitacion">
+		<property name="m2" value="20.3"></property>
+		<property name="tipoHab" value="Entrada"></property>			
+	</bean>
+	<bean id="listaHabitaciones" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="habitacion1"/>
+				<ref bean="habitacion2"/>
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="inquilino" class="entidad.Persona">
+		<property name="nombre" value="Alvaro"></property>
+		<property name="edad" value="32"></property>
+		<property name="dni" value="123123a"></property>
+		<property name="direccion" ref="direccion1"></property>	
+	</bean>
+	<bean id="listaInquilinos" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="inquilino"/>
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="casa" class="entidad.Casa">
+		<property name="listaHabitaciones" ref="listaHabitaciones"></property>
+		<property name="listaInquilinos" ref="listaInquilinos"></property>	
+		<property name="persona" ref="persona1"></property>
+		<property name="precio" value="800.43"></property>		
+		<property name="direccion" ref="direccion1"></property>	
+	</bean>
+	
+</beans>
+
+
+
+
+

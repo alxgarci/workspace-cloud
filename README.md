@@ -4,6 +4,6 @@
 
 | 1er Trimestre | 2do Trimestre |
 | -------------- | ------------- |
-| - ~~*Videojuego*~~ | - Videojuego_AGG |
+| - EjCasa | - Videojuego_AGG |
 |  | - EjMVCVideojuego |
 
